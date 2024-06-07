@@ -2,7 +2,6 @@ package com.ernandorezende.simple_order_manager_api.controllers;
 
 import com.ernandorezende.simple_order_manager_api.dto.ItemRequest;
 import com.ernandorezende.simple_order_manager_api.models.Item;
-import com.ernandorezende.simple_order_manager_api.repositories.ItemRepository;
 import com.ernandorezende.simple_order_manager_api.services.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -15,9 +14,8 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("api/items")
-public class Itemcontroller {
+public class ItemController {
     private final ItemService itemService;
-    private final ItemRepository itemRepository;
 
     @GetMapping
     public ResponseEntity<Page<Item>> findAll(

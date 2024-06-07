@@ -1,11 +1,8 @@
 package com.ernandorezende.simple_order_manager_api.controllers;
 
 import com.ernandorezende.simple_order_manager_api.dto.OrderRequest;
-import com.ernandorezende.simple_order_manager_api.dto.UserRequest;
 import com.ernandorezende.simple_order_manager_api.models.Order;
-import com.ernandorezende.simple_order_manager_api.models.User;
-import com.ernandorezende.simple_order_manager_api.services.OrderServevice;
-import com.ernandorezende.simple_order_manager_api.services.UserService;
+import com.ernandorezende.simple_order_manager_api.services.OrderService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -18,7 +15,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("api/orders")
 public class OrderController {
-    private final OrderServevice orderServevice;
+    private final OrderService orderServevice;
 
     @GetMapping
     public ResponseEntity<Page<Order>> findAll(

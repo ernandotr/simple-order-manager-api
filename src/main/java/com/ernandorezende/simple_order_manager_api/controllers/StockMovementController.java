@@ -1,11 +1,8 @@
 package com.ernandorezende.simple_order_manager_api.controllers;
 
 import com.ernandorezende.simple_order_manager_api.dto.StockMovementRequest;
-import com.ernandorezende.simple_order_manager_api.dto.UserRequest;
 import com.ernandorezende.simple_order_manager_api.models.StockMovement;
-import com.ernandorezende.simple_order_manager_api.models.User;
 import com.ernandorezende.simple_order_manager_api.services.StockMovementService;
-import com.ernandorezende.simple_order_manager_api.services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
